@@ -1,0 +1,14 @@
+<!-- 09 - ngSwitch -->
+
+<div [ngSwitch]="userRole">
+  <p *ngSwitchCase="'admin'">Admin panel</p>
+  <p *ngSwitchCase="'editor'">Editor tools</p>
+  <p *ngSwitchDefault>Standard view</p>
+</div>
+
+<!-- New Angular control flow syntax (v17+) -->
+@switch (userRole) {
+  @case ('admin') { <p>Admin panel</p> }
+  @case ('editor') { <p>Editor tools</p> }
+  @default { <p>Standard view</p> }
+}
