@@ -1,0 +1,22 @@
+<!-- 21 - TEMPLATE-DRIVEN FORMS -->
+<!-- Requires: FormsModule imported -->
+
+<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+  <input
+    name="name"
+    ngModel
+    required
+    minlength="2"
+    #name="ngModel">
+  <div *ngIf="name.invalid && name.touched">Name is required (min 2 chars)</div>
+
+  <input
+    name="email"
+    ngModel
+    required
+    email
+    #email="ngModel">
+  <div *ngIf="email.invalid && email.touched">Valid email required</div>
+
+  <button type="submit" [disabled]="signupForm.invalid">Submit</button>
+</form>
