@@ -1,0 +1,19 @@
+<!-- 08 - *ngFor STRUCTURAL DIRECTIVE -->
+
+<ul>
+  <li *ngFor="let item of items; let i = index; trackBy: trackByFn">
+    {{ i }} - {{ item.name }}
+  </li>
+</ul>
+
+<!-- odd/even/first/last helpers -->
+<div *ngFor="let item of items; let isFirst = first; let isOdd = odd">
+  <span *ngIf="isFirst">First item!</span>
+</div>
+
+<!-- New Angular control flow syntax (v17+) -->
+@for (item of items; track item.id) {
+  <li>{{ item.name }}</li>
+} @empty {
+  <li>No items found</li>
+}
