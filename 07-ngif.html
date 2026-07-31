@@ -1,0 +1,15 @@
+<!-- 07 - *ngIf STRUCTURAL DIRECTIVE -->
+
+<p *ngIf="isLoggedIn">Welcome back!</p>
+
+<p *ngIf="isLoggedIn; else guestBlock">Welcome back!</p>
+<ng-template #guestBlock>
+  <p>Please log in.</p>
+</ng-template>
+
+<!-- New Angular control flow syntax (v17+) -->
+@if (isLoggedIn) {
+  <p>Welcome back!</p>
+} @else {
+  <p>Please log in.</p>
+}
