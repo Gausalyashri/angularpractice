@@ -1,0 +1,13 @@
+<!-- 06 - TWO-WAY BINDING -->
+<!-- Banana in a box: [(ngModel)] combines property + event binding -->
+<!-- Requires FormsModule to be imported -->
+
+<input [(ngModel)]="username">
+<p>You typed: {{ username }}</p>
+
+<!-- manual equivalent of two-way binding -->
+<input [value]="username" (input)="username = $any($event.target).value">
+
+<!-- custom two-way binding on your own component -->
+<!-- requires @Input() value and @Output() valueChange -->
+<app-counter [(count)]="currentCount"></app-counter>

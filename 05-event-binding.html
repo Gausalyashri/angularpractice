@@ -1,0 +1,11 @@
+<!-- 05 - EVENT BINDING -->
+<!-- Parentheses bind a DOM event to a component method -->
+
+<button (click)="onSave()">Save</button>
+<button (click)="onDelete($event)">Delete</button>
+<input (keyup.enter)="onEnter()">
+<input (input)="onInput($event)">
+<form (ngSubmit)="onSubmit()"></form>
+
+<!-- $event gives you the native event object -->
+<div (mouseover)="log($event)"></div>
