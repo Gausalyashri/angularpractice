@@ -1,0 +1,10 @@
+<!-- 10 - ngClass -->
+
+<!-- object syntax: key = class name, value = boolean expression -->
+<div [ngClass]="{ active: isActive, disabled: isDisabled }">Box</div>
+
+<!-- array syntax -->
+<div [ngClass]="['card', 'shadow']">Box</div>
+
+<!-- string syntax -->
+<div [ngClass]="isActive ? 'active' : ''">Box</div>
