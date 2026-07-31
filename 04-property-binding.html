@@ -1,0 +1,11 @@
+<!-- 04 - PROPERTY BINDING -->
+<!-- Square brackets bind a DOM property to a component property -->
+
+<img [src]="imageUrl" [alt]="imageAlt">
+<button [disabled]="isSaving">Save</button>
+<div [class.active]="isActive">Toggled class</div>
+<div [style.color]="textColor">Colored text</div>
+<a [href]="linkUrl">Go</a>
+
+<!-- attribute binding (for things without a DOM property, e.g. aria-*, colspan) -->
+<td [attr.colspan]="columnSpan"></td>
